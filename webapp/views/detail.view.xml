@@ -1,0 +1,23 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:l="sap.ui.layout" 
+    xmlns:f="sap.ui.layout.form" 
+    xmlns:core="sap.ui.core" controllerName="webapp.controllers.detail" 
+    xmlns="sap.m">
+
+    <Page title="{i18n>detailTitle}" class="sapUiStdPage">
+        <headerContent>
+            <Button icon="sap-icon://edit" tooltip="Edit" />
+            <Button icon="sap-icon://save" tooltip="Save" />
+        </headerContent>
+        <content>
+            <VBox >
+                <f:SimpleForm layout="ResponsiveGridLayout" title="{notesDetail>/note_title}"  singleContainerFullSize="true">
+                    <f:content>
+                       <TextArea rows="20" width="100%" value="{notesDetail>/note_description}" />
+                       </f:content>
+                </f:SimpleForm>
+            </VBox>
+        </content>
+    </Page>
+
+</mvc:View>

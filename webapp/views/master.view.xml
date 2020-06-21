@@ -1,0 +1,19 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="webapp.controllers.master" 
+    xmlns="sap.m">
+
+    <Page showHeader="false" class="sapUiStdPage">
+        <content>
+            <List id="noteList" headerText="{i18n>masterTitle}" itemPress="onListSelectionChange" items="{path: 'notesList>/'}">
+            <headerToolbar>
+            <Toolbar>
+            <Title text="{i18n>masterTitle}"/>
+            <ToolbarSpacer/>
+            <Button icon="sap-icon://add"/>
+            </Toolbar>
+            </headerToolbar>
+                <StandardListItem title="{notesList>note_title}" type="Navigation" />
+            </List>
+        </content>
+    </Page>
+
+</mvc:View>
